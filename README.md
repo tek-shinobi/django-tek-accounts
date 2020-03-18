@@ -1,4 +1,4 @@
-# django-tek-accounts
+# django-tekaccounts
 --------------------
 Django app for custom user model.
 
