@@ -1,8 +1,10 @@
-# django-tekaccounts
+# django-tek-accounts
 --------------------
-Django app for custom user model.
+Django accounts app for custom user model.
 
-Just drop it in your project and add 'accounts' to settings.INSTALLED_APPS like this:
+__Step 1__: Create new project. 
+
+__Step 2__: Drop __accounts__ folder as an app into your project and add 'accounts' to settings.INSTALLED_APPS like this:
 
 <pre>
 <code>
@@ -14,8 +16,8 @@ INSTALLED_APPS = [
 </pre>
 
 
-This will create a custom user with email as the required field. It will also configure the UserAdmin to show the custom user.
+__Step3__: Run ``python manage.py makemigrations`` and ``python manage.py migrate`` to generate the custom user model.
 
-Run ``python manage.py migrate`` to generate the custom user model.
+This will create a custom user with email as the required field. It will also configure the UserAdmin to show the custom user.
 
 Use __pytest__ for testing. The tests will be picked up from tests/ directory.
