@@ -23,7 +23,7 @@ AUTH_USER_MODEL = 'accounts.User'
 </code>
 </pre>
 
-__Step3__: Run ``python manage.py makemigrations`` and ``python manage.py migrate`` to generate the custom user model.
+__Step3__: Run ``python manage.py migrate`` to generate the custom user model.
 
 This will create a custom user with email as the required field. It will also configure the UserAdmin to show the custom user.
 
