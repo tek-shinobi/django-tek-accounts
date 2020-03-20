@@ -11,17 +11,21 @@ class UserFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = User
 
-    email = factory.Faker('email')
+    email = factory.Faker("email")
     staff = True
     admin = False
-    password = factory.LazyFunction(lambda: make_password('user'))  # all users have user as password
+    password = factory.LazyFunction(
+        lambda: make_password("user")
+    )  # all users have user as password
 
 
 class SuperuserFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = User
 
-    email = factory.Faker('email')
+    email = factory.Faker("email")
     staff = True
     admin = True
-    password = factory.LazyFunction(lambda: make_password('admin'))  # all superusers have admin as password
+    password = factory.LazyFunction(
+        lambda: make_password("admin")
+    )  # all superusers have admin as password
